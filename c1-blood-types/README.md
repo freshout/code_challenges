@@ -25,10 +25,10 @@ always has two – alleles.
 
 __Combination RH alleles__
 
-1.  +  +  ->  +
-2.  +  -  ->  +
-3.  -  +  ->  +
-4.  -  -  ->  -
+1.  '+  +  ->  +'
+2.  '+  -  ->  +'
+3.  '-  +  ->  +'
+4.  '-  -  ->  -'
 
 The blood type of a person is a combination of ABO blood type and Rh factor. The blood type is written by
 suffixing the ABO blood type with the + or - representing the Rh factor. Examples include A+, AB-, and O-.
