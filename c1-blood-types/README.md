@@ -36,7 +36,7 @@ __Note:__an uppercase letter “Oh” is used in this problem to denote blood ty
 
 
 ### Input
-A Yaml file blood.yml included in the folder. You should load this file into a hash
+A Yaml file blood_types.yml included in the folder. You should load this file into a hash
 
 ### Output
 A hash with all the combinations given filled with the missing set of possible types, if the combination is impossible
@@ -50,8 +50,8 @@ combination2 = mom B+, child O+<br />
 combination3 = dad A+, child O-<br />
 __output__<br />
 combinations = {<br />
-  "combination1" => {"dad" => "A+", "mom" => "O-", "child" => "A+"},<br />
-  "combination2" => {"dad" => ["B+", "B-"], "mom" => "B+", "child" => "O+"}<br />
-  "combination3" => {"dad" => "A+", "mom" => "IMPOSSIBLE", "child" => "O-"}<br />
+  "combination1" => {"dad" => "A+", "mom" => "O-", "child" => ["A+", "A-", "O+", "O-"]},<br />
+  "combination2" => {"dad" => ["O+", "O-"], "mom" => "B+", "child" => "O+"}<br />
+  "combination3" => {"dad" => "A+", "mom" => ["A-","B-","O-"], "child" => "O-"}<br />
 }
 
