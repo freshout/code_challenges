@@ -23,13 +23,6 @@ Likewise, every person has two alleles for the blood Rh factor, represented by t
 who is “Rh positive” or “Rh+” has at least one + allele, but could have two. Someone who is “Rh negative”
 always has two – alleles.
 
-__Combination RH alleles__
-
-1.  '+  +  ->  +'
-2.  '+  -  ->  +'
-3.  '-  +  ->  +'
-4.  '-  -  ->  -'
-
 The blood type of a person is a combination of ABO blood type and Rh factor. The blood type is written by
 suffixing the ABO blood type with the + or - representing the Rh factor. Examples include A+, AB-, and O-.
 Blood types are inherited: each biological parent donates one ABO allele (randomly chosen from their two) and
@@ -52,13 +45,13 @@ return the IMPOSSIBLE keyword.
 ### Example
 
 __input__<br />
-combination1 = dad A+, mom O-
-combination2 = mom B+, child O+
-combination3 = dad A+, child O-
+combination1 = dad A+, mom O-<br />
+combination2 = mom B+, child O+<br />
+combination3 = dad A+, child O-<br />
 __output__<br />
-'combinations = {<br />
+combinations = {<br />
   "combination1" => {"dad" => "A+", "mom" => "O-", "child" => "A+"},<br />
   "combination2" => {"dad" => ["B+", "B-"], "mom" => "B+", "child" => "O+"}<br />
   "combination3" => {"dad" => "A+", "mom" => "IMPOSSIBLE", "child" => "O-"}<br />
-}'
+}
 
