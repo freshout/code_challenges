@@ -11,6 +11,7 @@ letters: A, B, or O. This gives six possible combinations of these alleles that 
 resulting in a particular ABO blood type for that person.
 
 __Combination ABO Blood Type__
+
 1.  A  A  A
 2.  A  B  AB
 3.  A  O  A
@@ -23,6 +24,7 @@ who is “Rh positive” or “Rh+” has at least one + allele, but could have 
 always has two – alleles.
 
 __Combination RH alleles__
+
 1.  +  +  ->  +
 2.  +  -  ->  +
 3.  -  +  ->  +
