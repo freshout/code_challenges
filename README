@@ -1,0 +1,8 @@
+Freshout's Code Challenges
+==========================
+
+Here you will find a weekly code challenge. Each challenge has a README file with the complete instructions,
+explanation of the problem to solve and a sample input and output.
+What you are going to write is a class or a set of classes each one within its own file, those classes will be
+used by a test file. Your goal is to successfully pass all tests.
+
