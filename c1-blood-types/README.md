@@ -57,9 +57,9 @@ combinations = {<br />
 
 ### Your solution
   Put your source file blood_types.rb into a folder with your name under the submissions folder<br />
-  *   submissions
-      *   chuck_norris
-          *   blood_types.rb
+      *   submissions
+          *   chuck_norris
+              *   blood_types.rb
   then commit and push your changes<br />
   __Note:__don't forget to rebase
 
