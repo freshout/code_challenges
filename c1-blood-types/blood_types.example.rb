@@ -16,7 +16,7 @@ class BloodTypes
   #
   # @param [String] source the url of the input file.
   # @private
-  def init(source)
+  def initialize(source)
   end
 
 end
