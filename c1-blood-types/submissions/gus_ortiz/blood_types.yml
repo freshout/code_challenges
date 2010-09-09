@@ -1,4 +1,7 @@
 combinations:
+  - combination0:
+      dad:   O-
+      child: O-
   - combination1:
       dad:   A+
       mom:   B-
@@ -14,4 +17,16 @@ combinations:
   - combination5:
       dad:   AB+
       child: A-
+  - combination6:
+      dad:   AB-
+      child: O-
+  - combination7:
+      dad:   AB+
+      mom:   B+
+  - combination8:
+      dad:   O+
+      mom:   O+
+  - combination9:
+      dad:   O-
+      mom:   O-
 
