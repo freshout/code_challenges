@@ -1,3 +1,6 @@
+require 'yaml'
+
+
 class BloodTypes
   BLOODS_ABO = ["A-", "B-", "AB-", "O-", "A+", "B+", "AB+", "O+"]
 
@@ -62,14 +65,6 @@ class BloodTypes
 
   end
 
-  def mix_blood(dad_blood, mom_blood)
-    dad_posible_ABO = get_posible_ABO(blood)
-  end
-
-  def get_posible_ABO(blood)
-    the_ABO, the_RH = blood.match(/(\w+)(\+|-)/).to_a.slice(1,2)
-    POSIBLE_ABO[the_ABO]
-  end
   # Initializes the object loading the source file into
   #
   # @param [String] source the url of the input file.
