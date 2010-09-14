@@ -76,7 +76,7 @@ class BloodTypes
 end
 
 
-# I think is better to say that we inherit or blood from our grandparents
+# I think is better to say that we inherit our blood from our grandparents
 class Blood
 
   attr_accessor :rh
@@ -125,7 +125,7 @@ class Blood
     posible_abo = @blood.keys
     # blood can be rh negative every time, but positive can't be
     posible_blood = posible_abo.collect { |b| b + "-"}
-    # if can be rh positive add
+    # if can be rh positive add +
     if @rh == true
       posible_blood += posible_abo.collect { |b| b + "+"}
     end
