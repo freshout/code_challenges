@@ -1,5 +1,3 @@
-require 'ruby-debug'
-
 class SeaportTerminal
 
   # Stacks containers in the best possible way and returns the amount of stacks needed
@@ -33,22 +31,21 @@ class SeaportTerminal
   def minimum_stacks_for(containers_input)
     total_containers = { }
 
-    # Collect total containers for that row
     ("A".."Z").each {|name| total_containers[name] = 0}
     containers_input.each_char {|name| total_containers[name] = total_containers[name] + 1}
 
-    stacks = Stacks.new(total_containers)
+    sea_port_organizer = SeaPortOrganizer.new(total_containers)
 
     containers_input.each_char do |container|
-      stacks.push(container)
+      sea_port_organizer.push(container)
     end
 
-    stacks.size
+    sea_port_organizer.size
   end
 
 end
 
-class Stacks
+class SeaPortOrganizer
   def initialize(num_containers)
     @num_containers = num_containers.clone
     @stacks = []
@@ -59,21 +56,11 @@ class Stacks
   end
 
   def push(container)
-    is_on_stack = false
-    until is_on_stack
-      stack_count = 0
-      while (stack_count < @stacks.length) && (not is_on_stack)
-        if @stacks[stack_count].can_push?(container)
-          @stacks[stack_count].push(container)          
-          is_on_stack = true
-        else
-          stack_count += 1
-        end
-      end
-      unless is_on_stack
-        @stacks << Stack.new(self, container)
-        is_on_stack = true
-      end
+    stack = @stacks.detect { |stack| stack.can_push? container }
+    if stack
+      stack.push(container)
+    else
+      @stacks << Stack.new(self, container)
     end
     @stacks = @stacks.sort_by {|s| s.top_container}
   end
@@ -90,8 +77,8 @@ end
 class Stack
   attr_reader :top_container
   
-  def initialize(parent, container = nil)
-    @parent = parent
+  def initialize(organizer, container = nil)
+    @organizer = organizer
     if container
       push(container)
       return true
@@ -101,12 +88,12 @@ class Stack
   def can_push?(container)
     # this is for performance
     return true if @top_container == container
-    return false if @top_container < container || @parent.there_are_more?(@top_container)
+    return false if @top_container < container || @organizer.there_are_more?(@top_container)
     return true
   end
 
   def push(container)
     @top_container = container
-    @parent.decrement_count(container)
+    @organizer.decrement_count(container)
   end
 end
